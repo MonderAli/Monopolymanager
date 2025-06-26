@@ -1,0 +1,58 @@
+body{
+    background-color: red;
+    display:block;
+    text-align: center;
+
+}
+
+.nameLabel{
+    display: none;
+    align-items: center;
+    text-align: left;
+    
+}
+
+.balanceLabel{
+    display: none;
+    align-items: center;
+    text-align: left;
+}
+
+.names{
+    font-size: 24px;
+    text-align: left;
+}
+
+#nameConfirmSystem{
+    display: none;
+    text-align: left;
+}
+
+#controls{
+    display: none;
+    align-self: center;
+   
+}
+
+p{
+    color: yellow;
+    text-align: center;
+}
+
+h1{
+    color: yellow;
+    text-align: center;
+}
+
+button{
+    background-color: yellow;
+    color: red;
+    float: center;
+}
+
+label{
+    color:yellow;
+    text-align: center;
+}
+
+

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monopoly Bank Manager Site By Monder Ali</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <meta name="keywords" content="Monopoly, Monopoly money, Monopoly Manager, Monder Ali">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   <div id="chooseLang">
+    <a href="de.html" id="de">Deutsch</a>
+    <br>
+    <a href="es.html" id="es">Español</a>
+    <br>
+    <a href="fr.html" id="fr">Français</a>
+    <br>
+    <a href="it.html" id="it">Italiano</a>
+    <br>
+    <a href="index.html" id="en">English</a>
+    <br>
+    <a href="ar.html" id="ar">العربية</a>
+   </div>
+
+    <div id="upperSection">
+        <h1>מנהל הבנק של מונופול של מונדר עלי</h1>
+        <input type="number" id="playerAmountInput">
+        <label for="playerAmountInput">הכנס את מספר השחקנים</label>
+        <br>
+        <input type="number" id="balanceInput">
+        <label for="balanceInput">הכנס את הכסף ההתחלתי</label>
+        <br>
+        <button id="numberConfirm">אישור</button>
+        <br>
+    </div>
+    <div id="nameConfirmSystem">
+        <input type="text" id="playerNameInput">
+        <label for="playerNameInput">הכנס את שם השחקן</label>
+        <button id="nameConfirm">אישור שם</button>
+        <br>
+        <button id="startGame" disabled>התחל משחק</button>
+    </div>
+    
+
+    <div class="names">
+        <p class="nameLabel"> </p>
+        <p class="balanceLabel"> </p>
+        <br>
+        <p class="nameLabel"> </p>
+        <p class="balanceLabel"> </p>
+        <br>
+        <p class="nameLabel"> </p>
+        <p class="balanceLabel"> </p>
+        <br>
+        <p class="nameLabel"> </p>
+        <p class="balanceLabel"> </p>
+        <br>
+        <p class="nameLabel"> </p>
+        <p class="balanceLabel"> </p>
+        <br>
+        <p class="nameLabel"> </p>
+        <p class="balanceLabel"> </p>
+        <br>
+        <p class="nameLabel"> </p>
+        <p class="balanceLabel"> </p>
+        <p>
+        <p class="nameLabel"> </p>
+        <p class="balanceLabel"> </p>
+        <br>
+        <p class="nameLabel"> </p>
+        <p class="balanceLabel"> </p>
+        <br>
+        <p class="nameLabel"> </p>
+        <p class="balanceLabel"> </p>
+    </div>
+
+    <div id="controls">
+        <label for="selectPlayer"></label> 
+        <select id="selectPlayer"></select>
+        <br><br>
+        <button id="add">הוסף כסף לשחקן</button>
+        <button id="subtract">קח כסף משחקן</button>
+        <br>
+        <label for="fromPlayer">מ:</label>
+        <select id="fromPlayer"></select>
+
+        <label for="toPlayer">אל:</label>
+        <select id="toPlayer"></select>
+        <br><br>
+            
+        <button id="transfer">העבר כסף בין שני שחקנים</button>
+        <button id="go">דרך צלחה!</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

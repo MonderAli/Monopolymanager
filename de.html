@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="de" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monopoly Bank Manager Site By Monder Ali</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+<body>
+    <body>
+        <div id="chooseLang">
+            <a href="index.html" id="en">English</a>
+            <br>
+            <a href="es.html" id="es">Español</a>
+            <br>
+            <a href="fr.html" id="fr">Français</a>
+            <br>
+            <a href="it.html" id="it">Italiano</a>
+            <br>
+            <a href="he.html" id="he">עברית</a>
+            <br>
+            <a href="ar.html" id="ar">العربية</a>
+           </div>
+
+    <div id="upperSection">
+        <h1>Monopoly Bank Manager von Monder Ali</h1>
+        <input type="number" id="playerAmountInput">
+        <label for="playerAmountInput">Anzahl der Spieler eingeben</label>
+        <br>
+        <input type="number" id="balanceInput">
+        <label for="balanceInput">Startguthaben eingeben</label>
+        <br>
+        <button id="numberConfirm">Bestätigen</button>
+        <br>
+    </div>
+    <div id="nameConfirmSystem">
+        <input type="text" id="playerNameInput">
+        <label for="playerNameInput">Namen des Spielers eingeben</label>
+        <button id="nameConfirm">Namen bestätigen</button>
+        <br>
+        <button id="startGame" disabled>starten</button>
+    </div>
+    
+
+    <div class="names">
+        <p class="nameLabel"> </p>
+        <p class="balanceLabel"> </p>
+        <br>
+        <p class="nameLabel"> </p>
+        <p class="balanceLabel"> </p>
+        <br>
+        <p class="nameLabel"> </p>
+        <p class="balanceLabel"> </p>
+        <br>
+        <p class="nameLabel"> </p>
+        <p class="balanceLabel"> </p>
+        <br>
+        <p class="nameLabel"> </p>
+        <p class="balanceLabel"> </p>
+        <br>
+        <p class="nameLabel"> </p>
+        <p class="balanceLabel"> </p>
+        <br>
+        <p class="nameLabel"> </p>
+        <p class="balanceLabel"> </p>
+        <p>
+        <p class="nameLabel"> </p>
+        <p class="balanceLabel"> </p>
+        <br>
+        <p class="nameLabel"> </p>
+        <p class="balanceLabel"> </p>
+        <br>
+        <p class="nameLabel"> </p>
+        <p class="balanceLabel"> </p>
+    </div>
+
+    <div id="controls">
+        <label for="selectPlayer"></label> 
+        <select id="selectPlayer"></select>
+        <br><br>
+        <button id="add">Geld zum Spieler hinzufügen</button>
+        <button id="subtract">Geld vom Spieler abziehen</button>
+        <br>
+        <label for="fromPlayer">Aus:</label>
+        <select id="fromPlayer"></select>
+
+        <label for="toPlayer">Zu:</label>
+        <select id="toPlayer"></select>
+        <br><br>
+            
+        <button id="transfer">Überweisung zwischen 2 Spielern </button>
+        <button id="go">LOS!</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

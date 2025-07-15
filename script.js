@@ -3,7 +3,7 @@ let currentIndex = 0;
 let startingBalance = 0;
 let lang = "en"
 const file = window.location.pathname.split("/").pop();
-if(file.includes("de")){
+if(file.includes("deutsch")){
     lang = "de"
 }
 else if(file.includes("fr")){

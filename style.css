@@ -1,11 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,wght@1,100&display=swap');
+
+
 *{
-    font-family: 'Cinzel', serif;
+    Box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
 }
 body{
+    font-family: 'Inter', sans-serif;
+    font-style: italic;
+    font-weight: 100;
     background-color: #2a7f62;
-    display:block;
+    color:#ffd700;
     text-align: center;
-    
+    padding: 20px;
+
 
 }
 
@@ -23,53 +34,118 @@ body{
 }
 
 .names{
-    font-size: 24px;
+
+    font-family: 'Inter', sans-serif;
+    font-style: italic;
+    font-weight: 100;
+    font-size: 1.1rem;
     text-align: left;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(6px);
+    border-radius: 16px;
+    max-width: 400px;
+    padding: 15px;
+    margin: 20px auto;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
 }
 
 #nameConfirmSystem{
     display: none;
-    text-align: left;
 }
 
 #controls{
     display: none;
-    align-self: center;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    
-   
 }
 
-p{
+#upperSection{
+    display: flex;
+}
+#nameConfirmSystem, #controls, #upperSection{
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(8px);
+    border-radius: 16px;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 400px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+p, label{
+    font-family: 'Inter', sans-serif;
+    font-style: italic;
+    font-weight: 100;
     color:#ffd700;
-    text-align: center;
+    text-align: left;
+    margin: 5px 0;
+    font-size: 1rem;
 }
 
 h1{
+    font-family: 'Cinzel', serif;
+    font-weight: 700;
     color: #ffd700;
-    text-align: center;
+    margin-bottom: 20px;
 }
 
 button{
-    background-color: #fcbf49;
+    background: linear-gradient(135deg, #fcbf49, #ffdd70);
+    border: none;
+    border-radius: 12px;
+    margin: 8px 5px;
+    padding: 10px 20px;
+    font-family: 'Inter', sans-serif;
+    font-style: italic;
+    font-weight: 100;
+    cursor: pointer;
     color: #2a7f62;
-    border-color: #d62828;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-    float: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: all 0.25s ease;
 }
 
-label{
-    color:#ffd700;
-    text-align: center;
+button:hover{
+    background: linear-gradient(135deg, #ffd700, #fcbf49);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);    
 }
+
+button:disabled{
+    background: #c2b280;
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+
+input, select{
+    padding: 10px 12px;
+    margin: 8px 0;
+    border: 2px solid #fcbf49;
+    border-radius: 8px;
+    font-family: 'Inter', sans-serif;
+    font-style: italic;
+    font-weight: 100;
+    font-size: 1rem;
+    color: #2a7f62;
+    outline: none;
+    width: 80%;
+    max-width: 300px;
+    transition: border-color 0.25s, box-shadow 0.25s;
+}
+
+input:focus, select:focus{
+    border-color: #ffd700;
+    box-shadow: 0 0 8px rgba(255, 215, 0, 0.5);
+}
+
+
 
 #chooseLang{
     position: absolute;
     top: 10px;
     right: 20px;
-    display: block;
     text-align: right !important;
     font-size: small;
     width: 100%;
@@ -83,8 +159,36 @@ label{
     color: #fcbf49;
     font-family: inherit;
     text-decoration: none;
-    margin: 5px 0;
+    margin: 3px 0;
+    padding: 4px 8px;
+    border-radius: 8px;
+    transition: 0.25s ease;
     display: inline-flex;
     pointer-events: auto;
 
+}
+
+chooseLang a:hover{
+    background: rgba(255, 215, 255, 0.15);
+}
+
+
+@media (max-width: 600px){
+    body{
+        padding: 10px;
+    }
+    #upperSection, #nameConfirmSystem, #controls, .names{
+        width:100%;
+        max-width: 100%;
+        padding: 15px;
+        margin: 10px 0;
+    }
+    input, select, button{
+        width: 90%;
+        max-width: 300px;
+    }
+
+    .names{
+        font-size: 18px;
+    }
 }

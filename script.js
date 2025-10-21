@@ -37,6 +37,7 @@ document.getElementById("numberConfirm").addEventListener("click", () => {
     startingBalance = document.getElementById("balanceInput").value; // ✅ Fix here
     document.getElementById("upperSection").style.display = "none";
     document.getElementById("nameConfirmSystem").style.display = "block";
+    document.getElementById("names").style.display = "inline-flex";
 });
 
 document.getElementById("nameConfirm").addEventListener("click", () => {

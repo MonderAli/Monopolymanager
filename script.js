@@ -6,6 +6,9 @@ const file = window.location.pathname.split("/").pop();
 if(file.includes("deutsch")){
     lang = "de"
 }
+else if(file.includes("index")){
+    lang = "en"
+}
 else if(file.includes("fr")){
     lang = "fr"
 }
@@ -34,10 +37,12 @@ const translations = {
 
 document.getElementById("numberConfirm").addEventListener("click", () => {
     playerAmount = parseInt(document.getElementById("playerAmountInput").value, 10);
-    startingBalance = document.getElementById("balanceInput").value; // ✅ Fix here
+    startingBalance = parseInt(document.getElementById("balanceInput").value, 10) || 0; // ensure numeric
     document.getElementById("upperSection").style.display = "none";
     document.getElementById("nameConfirmSystem").style.display = "block";
-    document.getElementById("names").style.display = "inline-flex";
+    // show the names container (it's a class `.names` in the HTML/CSS)
+    const namesEl = document.querySelector('.names');
+    if (namesEl) namesEl.style.display = 'block';
 });
 
 document.getElementById("nameConfirm").addEventListener("click", () => {
@@ -45,6 +50,7 @@ document.getElementById("nameConfirm").addEventListener("click", () => {
 
     if (currentIndex >= playerAmount) {
         alert(translations[lang].allNamesAlready);
+        console.log(lang)
         return;
     }
 

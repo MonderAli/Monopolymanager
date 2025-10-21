@@ -106,22 +106,24 @@ h1{
 :lang(ar){
     font-family: 'Cairo', sans-serif;
     direction: rtl;
-    text-align: right;
+    
 }
 
 :lang(he){
     font-family: 'Assistant', sans-serif;
     direction: rtl;
-    text-align: right;
+    
 }
 
 :lang(ar) h1{
     font-family: 'Aref Ruqaa', serif;
-    
+    direction: rtl;
+
 }
 
 :lang(he) h1{
     font-family: 'Frank Ruhl Libre', serif;
+    direction: rtl;
 }
 
 

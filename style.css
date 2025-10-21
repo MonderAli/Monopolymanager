@@ -34,7 +34,7 @@ body{
 }
 
 .names{
-
+    display: none;
     font-family: 'Inter', sans-serif;
     font-style: italic;
     font-weight: 100;

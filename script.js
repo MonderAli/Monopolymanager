@@ -25,13 +25,13 @@ else if(file.includes("he")){
     lang = "he"
 }
 const translations = { 
-    en: { allNamesIn: "All names are in!", allNamesAlready: "All names are already entered!", enterName: "Enter a name please", transSame: "Cannot transfer to the same player!", invalid: "Invalid amount", add: "Enter amount to add:", sub: "Enter amount to subtract", trans:"Enter amount to transfer", noTrans:"No enough money to transfer" },
-    de: {allNamesIn: "Alle namen sind drin", allNamesAlready: "Alle namen sind bereits eingegeben", enterName: "Bitte einen Namen eingeben", transSame: "Übertragung an denselben Spieler nicht möglich", invalid: "Ungültiger Betrag", add: "Betrag zum Hinzufügen eingeben", sub: "Betrag zum Abziehen eingeben", trans: "Betrag zum Übertragen eingeben", noTrans: "Nicht genug Geld für die Überweisung"},
-    fr: {allNamesIn: "Tous les noms sont entrés", allNamesAlready: "Tous les noms sont déjà entrés", enterName: "Veuillez entrer un nom", transSame: "Impossible de transférer au même joueur", invalid: "Montant invalide", add: "Entrez le montant à ajouter", sub: "Entrez le montant à soustraire", trans: "Entrez le montant à transférer", noTrans: "Fonds insuffisantes pour le transfert"},
-    it: {allNamesIn: "Tutti i nomi sono inseriti", allNamesAlready: "Tutti i nomi sono già inseriti", enterName: "Per favore, inserisci un nome", transSame: "Impossibile trasferire allo stesso giocatore", invalid: "Importo non valido", add: "Inserisci l'importo da aggiungere  ", sub: "Inserisci l'importo da sottrarre  ", trans: "Inserisci l'importo da trasferire  ", noTrans: "Fondi insufficienti per il trasferimento"},
-    es: {allNamesIn: "Todos los nombres están dentro", allNamesAlready: "Todos los nombres ya están ingresados  ", enterName: "Por favor, ingrese un nombre ", transSame: " No se puede transferir al mismo jugador", invalid: "Cantidad no válida", add: "Ingresa la cantidad a añadir", sub: " Ingresa la cantidad a restar", trans: "Ingresa la cantidad a transferir", noTrans: "No hay suficiente dinero para transferir"},
-    ar: {allNamesIn: "تم إدخال جميع الأسماء", allNamesAlready: "تم إدخال جميع الأسماء بالفعل ", enterName: "الرجاء إدخال إسم", transSame: "لا يمكن النقل إلى الاعب نفسه", invalid: "مبلغ غير صالح", add: "أدخل الكمية المراد إضافتها", sub: " أدخل الكمية المراد إنقاصها", trans: "أدخل الكمية المراد نقلها", noTrans: "لا يوجد مال كافي لعملية النقل"},
-    he: {allNamesIn: "כל השמות הוכנסו", allNamesAlready: "כל השמות הוכנסו כבר ", enterName: "נא להכניס שם בבקשה ", transSame: " לא ניתן להעביר לאותו שחקן", invalid: "כמות לא תקינה", add: "אנא הכנס כמות להוספה", sub: " אנא הכנס כמות להחסרה", trans: "אנא הכנס כמות להעברה", noTrans: "אין מספיק כסף לבצע העברה זאת"}
+    en: { allNamesIn: "All names are in!", allNamesAlready: "All names are already entered!", enterName: "Enter a name please", transSame: "Cannot transfer to the same player!", invalid: "Invalid amount", add: "Enter amount to add:", sub: "Enter amount to subtract", trans:"Enter amount to transfer", noTrans:"No enough money to transfer" , bankrupt: "Bankrupt" },
+    de: {allNamesIn: "Alle namen sind drin", allNamesAlready: "Alle namen sind bereits eingegeben", enterName: "Bitte einen Namen eingeben", transSame: "Übertragung an denselben Spieler nicht möglich", invalid: "Ungültiger Betrag", add: "Betrag zum Hinzufügen eingeben", sub: "Betrag zum Abziehen eingeben", trans: "Betrag zum Übertragen eingeben", noTrans: "Nicht genug Geld für die Überweisung", bankrupt: "Bankrott"},
+    fr: {allNamesIn: "Tous les noms sont entrés", allNamesAlready: "Tous les noms sont déjà entrés", enterName: "Veuillez entrer un nom", transSame: "Impossible de transférer au même joueur", invalid: "Montant invalide", add: "Entrez le montant à ajouter", sub: "Entrez le montant à soustraire", trans: "Entrez le montant à transférer", noTrans: "Fonds insuffisantes pour le transfert", bankrupt: "Faillite"},
+    it: {allNamesIn: "Tutti i nomi sono inseriti", allNamesAlready: "Tutti i nomi sono già inseriti", enterName: "Per favore, inserisci un nome", transSame: "Impossibile trasferire allo stesso giocatore", invalid: "Importo non valido", add: "Inserisci l'importo da aggiungere  ", sub: "Inserisci l'importo da sottrarre  ", trans: "Inserisci l'importo da trasferire  ", noTrans: "Fondi insufficienti per il trasferimento", bankrupt: "Bancarotta"},
+    es: {allNamesIn: "Todos los nombres están dentro", allNamesAlready: "Todos los nombres ya están ingresados  ", enterName: "Por favor, ingrese un nombre ", transSame: " No se puede transferir al mismo jugador", invalid: "Cantidad no válida", add: "Ingresa la cantidad a añadir", sub: " Ingresa la cantidad a restar", trans: "Ingresa la cantidad a transferir", noTrans: "No hay suficiente dinero para transferir", bankrupt: "Bancarotta"},
+    ar: {allNamesIn: "تم إدخال جميع الأسماء", allNamesAlready: "تم إدخال جميع الأسماء بالفعل ", enterName: "الرجاء إدخال إسم", transSame: "لا يمكن النقل إلى الاعب نفسه", invalid: "مبلغ غير صالح", add: "أدخل الكمية المراد إضافتها", sub: " أدخل الكمية المراد إنقاصها", trans: "أدخل الكمية المراد نقلها", noTrans: "لا يوجد مال كافي لعملية النقل", bankrupt: "مفلس"},
+    he: {allNamesIn: "כל השמות הוכנסו", allNamesAlready: "כל השמות הוכנסו כבר ", enterName: "נא להכניס שם בבקשה ", transSame: " לא ניתן להעביר לאותו שחקן", invalid: "כמות לא תקינה", add: "אנא הכנס כמות להוספה", sub: " אנא הכנס כמות להחסרה", trans: "אנא הכנס כמות להעברה", noTrans: "אין מספיק כסף לבצע העברה זאת", bankrupt: "פשט רגל"}
 
 } 
 
@@ -184,3 +184,12 @@ document.getElementById("go").addEventListener("click", () => {
 
     balanceLabels[index].textContent = currentBalance + 200;
 });
+
+document.getElementById("bankrupt").addEventListener("click", () => {
+    const index = parseInt(document.getElementById("selectPlayer").value);
+    let balanceLabel = document.getElementsByClassName("balanceLabel");
+    balanceLabel[index].textContent = translations[lang].bankrupt;
+    document.getElementById("selectPlayer").remove(index);
+    document.getElementById("toPlayer").remove(index);
+    document.getElementById("fromPlayer").remove(index);
+})

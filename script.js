@@ -45,6 +45,9 @@ document.getElementById("numberConfirm").addEventListener("click", () => {
     if (namesEl) namesEl.style.display = 'block';
 });
 
+ 
+
+ document.getElementById("nameConfirm").disabled = false;
 document.getElementById("nameConfirm").addEventListener("click", () => {
     let name = document.getElementById("playerNameInput").value.trim();
 
@@ -60,12 +63,12 @@ document.getElementById("nameConfirm").addEventListener("click", () => {
     }
 
     let nameLabels = document.getElementsByClassName("nameLabel");
-    let balanceLabels = document.getElementsByClassName("balanceLabel"); // ✅ Fix here
+    let balanceLabels = document.getElementsByClassName("balanceLabel"); 
 
     nameLabels[currentIndex].textContent = name;
     nameLabels[currentIndex].style.display = "inline-flex";
 
-    balanceLabels[currentIndex].textContent = startingBalance; // ✅ Fix here
+    balanceLabels[currentIndex].textContent = startingBalance; 
     balanceLabels[currentIndex].style.display = "inline-flex";
 
     document.getElementById("playerNameInput").value = "";
@@ -193,3 +196,21 @@ document.getElementById("bankrupt").addEventListener("click", () => {
     document.getElementById("toPlayer").remove(index);
     document.getElementById("fromPlayer").remove(index);
 })
+
+const amountInput = document.getElementById("playerAmountInput")
+const balanceInput = document.getElementById("balanceInput")
+const confirmbtn = document.getElementById("numberConfirm");
+ function numValid(){
+    const amount = parseInt(amountInput.value, 10);
+    const balance = parseInt(balanceInput.value, 10);
+    if (!isNaN(amount) && amount > 0 && !isNaN(balance) && balance >= 0){
+        confirmbtn.disabled = false;
+    }
+
+    else{
+        confirmbtn.disabled = true;
+    }
+}
+
+amountInput.addEventListener("input", numValid);
+balanceInput.addEventListener("input", numValid);

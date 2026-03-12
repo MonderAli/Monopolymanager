@@ -1,1 +1,15 @@
-{\n  "name": "Monopoly Manager",\n  "short_name": "Monopoly",\n  "description": "An engaging Monopoly game manager for tracking your progress.",\n  "icons": [\n    {\n      "src": "appIcon.png",\n      "sizes": "512x512",\n      "type": "image/png"\n    },\n    {\n      "src":"appIcon.png",\n      "sizes": "512x512",\n      "type": "image/png"\n    }\n  ],\n  "start_url": ".",\n  "display": "standalone",\n  "theme_color": "#009688",\n  "background_color": "#ffffff"\n}
+{ "name": "Monopoly Manager",
+  "short_name": "Monopoly",
+  "description": "An engaging Monopoly game manager for tracking your progress.",
+  "icons": [
+       {
+        "src": "appIcon.png",
+         "sizes": "512x512",
+        "type": "image/png"
+       },
+
+    
+    "start_url": ".",
+    "display": "standalone",
+     "theme_color": "#009688",
+     "background_color": "#ffffff"\n}

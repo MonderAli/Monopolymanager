@@ -3,6 +3,9 @@ let currentIndex = 0;
 let startingBalance = 0;
 let lang = "en"
 const file = window.location.pathname.split("/").pop();
+let hisLog = []
+const log = document.getElementById("log");
+
 if(file.includes("deutsch")){
     lang = "de"
 }
@@ -40,6 +43,7 @@ document.getElementById("numberConfirm").addEventListener("click", () => {
     startingBalance = parseInt(document.getElementById("balanceInput").value, 10) || 0; // ensure numeric
     document.getElementById("upperSection").style.display = "none";
     document.getElementById("nameConfirmSystem").style.display = "block";
+    log.style.display = "block";
     // show the names container (it's a class `.names` in the HTML/CSS)
     const namesEl = document.querySelector('.names');
     if (namesEl) namesEl.style.display = 'block';
@@ -134,6 +138,8 @@ document.getElementById("transfer").addEventListener("click", () => {
     let balanceLabels = document.getElementsByClassName("balanceLabel");
     let fromBalance = parseInt(balanceLabels[fromIndex].textContent);
     let toBalance = parseInt(balanceLabels[toIndex].textContent);
+    let fromName = document.getElementsByClassName("nameLabel")[fromIndex].textContent;
+    let toName = document.getElementsByClassName("nameLabel")[toIndex].textContent;
 
     if (fromBalance < amount) {
         alert(translations[lang].noTrans);
@@ -145,6 +151,7 @@ document.getElementById("transfer").addEventListener("click", () => {
 
     balanceLabels[fromIndex].textContent = fromBalance;
     balanceLabels[toIndex].textContent = toBalance;
+    updateLog(`${fromName} -> ${toName} `, amount);
 });
 
 
@@ -158,8 +165,10 @@ document.getElementById("add").addEventListener("click", () => {
 
     let balanceLabels = document.getElementsByClassName("balanceLabel");
     let currentBalance = parseInt(balanceLabels[index].textContent);
+    let name = document.getElementsByClassName("nameLabel")[index].textContent;
 
     balanceLabels[index].textContent = currentBalance + amount;
+    updateLog(name, amount);
 });
 
 
@@ -174,8 +183,10 @@ document.getElementById("subtract").addEventListener("click", () => {
 
     let balanceLabels = document.getElementsByClassName("balanceLabel");
     let currentBalance = parseInt(balanceLabels[index].textContent);
+    let name = document.getElementsByClassName("nameLabel")[index].textContent;
 
     balanceLabels[index].textContent = currentBalance - amount;
+    updateLog(name, -1*amount);
 });
 
 document.getElementById("go").addEventListener("click", () => {
@@ -184,8 +195,10 @@ document.getElementById("go").addEventListener("click", () => {
 
     let balanceLabels = document.getElementsByClassName("balanceLabel");
     let currentBalance = parseInt(balanceLabels[index].textContent);
+    let name = document.getElementsByClassName("nameLabel")[index].textContent;
 
     balanceLabels[index].textContent = currentBalance + 200;
+    updateLog(name, "GO!");
 });
 
 document.getElementById("bankrupt").addEventListener("click", () => {
@@ -195,6 +208,8 @@ document.getElementById("bankrupt").addEventListener("click", () => {
     document.getElementById("selectPlayer").remove(index);
     document.getElementById("toPlayer").remove(index);
     document.getElementById("fromPlayer").remove(index);
+    let name = document.getElementsByClassName("nameLabel")[index].textContent;
+    updateLog(name, translations[lang].bankrupt);
 })
 
 const amountInput = document.getElementById("playerAmountInput")
@@ -210,6 +225,19 @@ const confirmbtn = document.getElementById("numberConfirm");
     else{
         confirmbtn.disabled = true;
     }
+}
+
+
+
+function updateLog(who,amount){
+    const arr = [who, amount];
+    hisLog.unshift(arr);
+    if(hisLog.length > 5) hisLog.pop();
+    for(let i = 0; i < hisLog.length; i++){
+        document.getElementsByClassName("who")[i].textContent = hisLog[i][0];
+        document.getElementsByClassName("amount")[i].textContent = String(hisLog[i][1]);
+    }
+    
 }
 
 amountInput.addEventListener("input", numValid);

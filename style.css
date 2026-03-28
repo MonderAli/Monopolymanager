@@ -32,15 +32,16 @@ body{
 .nameLabel{
     display: none;
     align-items: center;
-    text-align: left;
+    width: 60%; /* Forces it to share the row */
+    text-align: start; /* Automatically handles RTL */
 }
 
 .balanceLabel{
     display: none;
     align-items: center;
-    text-align: left;
+    width: 35%; /* Forces it to share the row */
+    text-align: end; /* Automatically handles RTL */
 }
-
 .names{
     display: none;
     font-family: 'Inter', sans-serif;

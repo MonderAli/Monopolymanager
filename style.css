@@ -97,16 +97,15 @@ body{
     gap: 10px;
 }
 
-p, label{
+p, label {
     font-family: 'Inter', sans-serif;
     font-style: italic;
     font-weight: 100;
-    color:#ffd700;
-    text-align: left;
+    color: #ffd700;
+    text-align: start; /* <--- This automatically adapts to the language direction */
     margin: 5px 0;
     font-size: 1rem;
 }
-
 h1{
     font-family: 'Cinzel', serif;
     font-weight: 700;
@@ -272,13 +271,14 @@ chooseLang a:hover{
         display: none;
     }
 
-    /* Forces names and balances to perfectly share a single row */
+/* Forces names and balances to share the same line nicely and respect RTL */
     .nameLabel {
-        width: 60% !important;
-        margin-bottom: 8px;
+        display: inline-block !important;
+        width: 60%;
+        text-align: start !important;
     }
     .balanceLabel {
-        width: 40% !important;
-        text-align: right !important;
-        margin-bottom: 8px;
+        display: inline-block !important;
+        width: 35%;
+        text-align: end !important;
     }

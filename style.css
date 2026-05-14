@@ -25,6 +25,15 @@ body{
     padding: 20px;
 }
 
+#dodo{
+    height: 200px;
+    width: 200px;
+    position: absolute;
+    top: 15px;
+    left: 100px;
+    fill:#fcbf49;
+}
+
 :lang(ar), :lang(he){
     direction: rtl;
 }
@@ -259,7 +268,7 @@ chooseLang a:hover{
         gap: 8px;
     }
     /* Tucks the log strictly on the right side */
-    #log {
+    #log, #dodo {
         display: none !important;
     }}
 
@@ -283,3 +292,7 @@ chooseLang a:hover{
         width: 35%;
         text-align: end !important;
     }
+
+
+   
+    
